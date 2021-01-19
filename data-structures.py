@@ -102,7 +102,7 @@ def main():
     student_data = get_data_from_user()
     avg_marks = get_avg_marks(student_data)
     for x in avg_marks:
-        prin"Student:", x, "Average Marks:", avg_marks[x])
+        print("Student:", x, "Average Marks:", avg_marks[x])
 
 
 main()
