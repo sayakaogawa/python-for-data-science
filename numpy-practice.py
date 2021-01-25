@@ -1,6 +1,7 @@
 import numpy as np
 #import matplotlib.pyplot as plt
 import numpy.linalg as la # lin alg linrary in np has a lot of fxns, e.g., eigen values; important for data science
+import timeit
 
 
 def array_descriptor_fxns():
@@ -132,6 +133,27 @@ def array_broadcasting():
     return a
 
 
+def universal_functions():
+    a = np.round(10*np.random.rand(2,3))    # e.g. of broadcast
+    # a = a + 3   # another e.g. of broadcast
+    # a = a + (np.arange(2).reshape(2,1))
+    
+    b = np.round(10*np.random.rand(2, 2))
+    
+    # values fed to function must be in a tuple
+    c = np.hstack((a, b))
+    
+    # sorting array
+    d = np.random.permutation(np.arange(10))
+    d = np.sort(d)  # default in ascending order
+    d = d[::-1] # now sorted in descending order
+    
+    # sorting string array.
+    e = np.array(["abc", "howareyou", "u785", "13er"])
+    e = np.sort(e)  # sorts according to alphanumeric order
+    
+
+
 def main():
 
     # arr1 = array_descriptor_fxns()
@@ -139,7 +161,8 @@ def main():
     # arr3 = array_slicing()
     # arr4 = array_masking()
     # arr5 = array_broadcasting()
-
+    # arr6 = universal_functions()
+    
 
 
 main()
